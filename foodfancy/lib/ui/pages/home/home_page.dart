@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodfancy/ui/pages/home/widgets/order_card.dart';
 import 'package:foodfancy/ui/widgets/custom_app_bar.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,10 +19,17 @@ class _HomePageState extends State<HomePage> {
       body: ListView(
         padding: const EdgeInsets.all(18),
         children: [
-          const Text('New Request'),
+          const Text(
+            'New Request',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
           verticalSpace18,
-          const Placeholder(
-            fallbackHeight: 217,
+          const OrderCard(
+            title: 'Chicken Masala Pasta',
+            orderNumber: '23372882',
+            price: r'$152.05',
+            units: 2,
+            time: '1:20',
           ),
           verticalSpace18,
           Row(
