@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodfancy/ui/widgets/custom_app_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     const verticalSpace18 = SizedBox(height: 18);
     return Scaffold(
-      appBar: AppBar(),
+      appBar: const CustomAppBar(),
       backgroundColor: Colors.white,
       body: ListView(
         padding: const EdgeInsets.all(18),
