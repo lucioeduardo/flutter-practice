@@ -21,7 +21,7 @@ class MenuItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 163,
-      width: 149,
+      width: double.infinity,
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(20),

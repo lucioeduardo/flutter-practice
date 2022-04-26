@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:foodfancy/ui/pages/home/widgets/order_card.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:foodfancy/ui/widgets/custom_app_bar.dart';
+
+import 'widgets/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -38,8 +40,19 @@ class _HomePageState extends State<HomePage> {
               Flexible(
                 child: Column(
                   children: const [
-                    Placeholder(fallbackHeight: 163),
-                    Placeholder(fallbackHeight: 163),
+                    MenuItem(
+                      color: Color(0xffd4ebf3),
+                      icon: FontAwesomeIcons.utensils,
+                      title: 'Orders',
+                      subtitle: '12 delivered',
+                    ),
+                    SizedBox(height: 18),
+                    MenuItem(
+                      color: Color(0xffF0F6E6),
+                      icon: FontAwesomeIcons.dollarSign,
+                      title: 'Earnings',
+                      subtitle: r'$205.43',
+                    ),
                   ],
                 ),
               ),
@@ -48,8 +61,19 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: const [
                     SizedBox(height: 30),
-                    Placeholder(fallbackHeight: 163),
-                    Placeholder(fallbackHeight: 163),
+                    MenuItem(
+                      color: Color(0xffF8ECEA),
+                      icon: FontAwesomeIcons.bowlFood,
+                      title: 'Menus',
+                      subtitle: '6 Menus',
+                    ),
+                    SizedBox(height: 18),
+                    MenuItem(
+                      color: Color(0xffE7E5F5),
+                      icon: FontAwesomeIcons.envelope,
+                      title: 'Inbox',
+                      subtitle: '12 Messages',
+                    ),
                   ],
                 ),
               )
