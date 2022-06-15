@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:foodfancy/ui/widgets/custom_app_bar.dart';
+import 'package:foodfancy/ui/pages/home/widgets/widgets.dart';
 
-import 'widgets/widgets.dart';
+import '../../widgets/custom_app_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -19,6 +19,7 @@ class _HomePageState extends State<HomePage> {
       appBar: const CustomAppBar(),
       backgroundColor: Colors.white,
       body: ListView(
+        physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.all(18),
         children: [
           const Text(
@@ -40,14 +41,14 @@ class _HomePageState extends State<HomePage> {
               Flexible(
                 child: Column(
                   children: const [
-                    MenuItem(
+                    CustomMenuItem(
                       color: Color(0xffd4ebf3),
                       icon: FontAwesomeIcons.utensils,
                       title: 'Orders',
                       subtitle: '12 delivered',
                     ),
                     SizedBox(height: 18),
-                    MenuItem(
+                    CustomMenuItem(
                       color: Color(0xffF0F6E6),
                       icon: FontAwesomeIcons.dollarSign,
                       title: 'Earnings',
@@ -61,14 +62,14 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: const [
                     SizedBox(height: 30),
-                    MenuItem(
+                    CustomMenuItem(
                       color: Color(0xffF8ECEA),
                       icon: FontAwesomeIcons.bowlFood,
                       title: 'Menus',
                       subtitle: '6 Menus',
                     ),
                     SizedBox(height: 18),
-                    MenuItem(
+                    CustomMenuItem(
                       color: Color(0xffE7E5F5),
                       icon: FontAwesomeIcons.envelope,
                       title: 'Inbox',

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class MenuItem extends StatelessWidget {
-  const MenuItem({
+class CustomMenuItem extends StatelessWidget {
+  const CustomMenuItem({
     Key? key,
     required this.color,
     required this.title,
@@ -40,12 +40,7 @@ class MenuItem extends StatelessWidget {
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        blurRadius: 2,
-                        color: Colors.black12,
-                        offset: Offset(0, 2))
-                  ],
+                  boxShadow: [BoxShadow(blurRadius: 2, color: Colors.black12, offset: Offset(0, 2))],
                 ),
                 child: Center(child: FaIcon(icon)),
               ),
