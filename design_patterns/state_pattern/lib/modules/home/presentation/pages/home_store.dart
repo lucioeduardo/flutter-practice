@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:state_pattern/modules/home/domain/usecases/get_random_activity_usecase.dart';
+import '../../domain/usecases/get_random_activity_usecase.dart';
 
 import 'home_state.dart';
 

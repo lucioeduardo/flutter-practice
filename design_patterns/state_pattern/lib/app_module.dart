@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:state_pattern/modules/home/home_module.dart';
+import 'modules/home/home_module.dart';
 
 import 'modules/shared/base_module.dart';
 
