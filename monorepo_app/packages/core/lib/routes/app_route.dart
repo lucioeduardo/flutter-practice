@@ -21,6 +21,7 @@ class AppRoutes {
 
   static const splashPage = 'splash';
   static const homePage = 'home';
+  static const loginPage = 'login';
 
   static final _routes = <AppRoute>[];
   static void addRoutes(List<AppRoute> routes) {

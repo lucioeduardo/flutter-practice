@@ -18,7 +18,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    widget.controller.goToHome();
+    widget.controller.goToLogin();
   }
 
   @override
