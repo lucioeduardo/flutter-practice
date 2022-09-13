@@ -1,5 +1,5 @@
 import 'package:core/core.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:dependencies/dependencies.dart';
 
 class SplashController {
   final AppNavigator appNavigator;

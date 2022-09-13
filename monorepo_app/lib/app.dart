@@ -1,4 +1,5 @@
 import 'package:core/core.dart';
+import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -13,11 +14,17 @@ class App extends StatelessWidget {
     SystemChrome.setPreferredOrientations(
       <DeviceOrientation>[DeviceOrientation.portraitUp],
     );
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarColor: AppColors.transparent,
+      ),
+    );
 
     return MaterialApp(
       title: 'Base Project',
       debugShowCheckedModeBanner: false,
       navigatorKey: _navigatorKey,
+      theme: AppTheme.defaultThemeData,
       supportedLocales: const <Locale>[
         Locale('pt', 'BR'),
       ],
