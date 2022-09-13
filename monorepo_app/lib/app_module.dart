@@ -1,10 +1,14 @@
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
+import 'package:home/home_module.dart';
 import 'package:splash/splash.dart';
 
 class AppModule extends MainModule {
   @override
-  List<BaseModule> get modules => [SplashModule()];
+  List<BaseModule> get modules => [
+        SplashModule(),
+        HomeModule(),
+      ];
 
   @override
   Future<void> registerGlobalInjections() async {

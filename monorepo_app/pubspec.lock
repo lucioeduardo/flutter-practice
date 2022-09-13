@@ -142,6 +142,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "7.2.0"
+  home:
+    dependency: "direct main"
+    description:
+      path: "packages/micro_apps/home"
+      relative: true
+    source: path
+    version: "0.0.1"
   html:
     dependency: transitive
     description:

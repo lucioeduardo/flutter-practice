@@ -17,6 +17,8 @@ dependencies:
     path: packages/core
   splash:
     path: packages/micro_apps/splash
+  home:
+    path: packages/micro_apps/home
   design_system: 
     path: packages/common/design_system
 

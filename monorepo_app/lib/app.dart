@@ -25,9 +25,6 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       navigatorKey: _navigatorKey,
       theme: AppTheme.defaultThemeData,
-      supportedLocales: const <Locale>[
-        Locale('pt', 'BR'),
-      ],
       initialRoute: AppRoutes.splashPage,
       onGenerateRoute: (settings) {
         final route = AppRoutes.findRoute(name: settings.name ?? '');
