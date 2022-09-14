@@ -1,7 +1,6 @@
-name: login
+name: validation
 description: A new Flutter package project.
 version: 0.0.1
-publish_to: 'none'
 homepage: _
 
 environment:
@@ -11,14 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  core:
-    path: ../../core
-  dependencies:
-    path: ../../common/dependencies
-  design_system: 
-    path: ../../common/design_system
-  validation:
-    path: ../../common/validation
 
 dev_dependencies:
   flutter_test:

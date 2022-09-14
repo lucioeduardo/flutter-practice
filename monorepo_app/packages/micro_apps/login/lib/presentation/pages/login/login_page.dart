@@ -20,26 +20,39 @@ class LoginPage extends StatelessWidget {
                 return const Center(
                   child: CircularProgressIndicator(),
                 );
-              } else {
+              } else if (state is InitialState) {
                 return Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    children: [
-                      const TextField(
-                        decoration: InputDecoration(labelText: 'Email'),
-                      ),
-                      const SizedBox(height: 10),
-                      const TextField(
-                        decoration: InputDecoration(labelText: 'Senha'),
-                      ),
-                      const SizedBox(height: 10),
-                      ElevatedButton(
-                          onPressed: controller.login,
-                          child: const Text('Login')),
-                    ],
+                  child: Form(
+                    onChanged: controller.onFormChanged,
+                    child: Column(
+                      children: [
+                        TextFormField(
+                          controller: controller.emailController,
+                          validator: controller.emailController.validator,
+                          autovalidateMode: AutovalidateMode.onUserInteraction,
+                          decoration: const InputDecoration(labelText: 'Email'),
+                        ),
+                        const SizedBox(height: 10),
+                        TextFormField(
+                          controller: controller.passwordController,
+                          validator: controller.passwordController.validator,
+                          autovalidateMode: AutovalidateMode.onUserInteraction,
+                          decoration: const InputDecoration(labelText: 'Senha'),
+                        ),
+                        const SizedBox(height: 10),
+                        ElevatedButton(
+                          onPressed:
+                              state.isFormValid ? controller.login : null,
+                          child: const Text('Login'),
+                        ),
+                      ],
+                    ),
                   ),
                 );
               }
+
+              return const SizedBox.shrink();
             }),
       );
 }

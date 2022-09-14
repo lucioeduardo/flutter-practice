@@ -294,6 +294,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.4"
+  validation:
+    dependency: transitive
+    description:
+      path: "packages/common/validation"
+      relative: true
+    source: path
+    version: "0.0.1"
   vector_math:
     dependency: transitive
     description:
