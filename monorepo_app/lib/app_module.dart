@@ -1,7 +1,7 @@
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
-import 'package:home/home_module.dart';
-import 'package:login/login_module.dart';
+import 'package:home/home.dart';
+import 'package:login/login.dart';
 import 'package:splash/splash.dart';
 
 class AppModule extends MainModule {

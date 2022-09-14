@@ -1,5 +1,4 @@
-import 'package:core/modules/modules.dart';
-import 'package:core/routes/app_route.dart';
+import 'package:core/core.dart';
 import 'package:login/login.dart';
 
 class LoginModule extends BaseModule {

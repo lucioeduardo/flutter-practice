@@ -1,9 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:core/routes/routes.dart';
+import 'package:core/core.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:login/login.dart';
 import 'package:validation/validation.dart';
-
-import '../../../../login.dart';
 
 class LoginController extends ValueNotifier<LoginState> {
   final AppNavigator appNavigator;

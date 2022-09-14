@@ -1,6 +1,6 @@
 import 'package:core/core.dart';
 
-import 'home.dart';
+import '../home.dart';
 
 class HomeModule extends BaseModule {
   @override

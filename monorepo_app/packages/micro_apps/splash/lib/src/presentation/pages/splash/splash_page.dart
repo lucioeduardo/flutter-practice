@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../splash.dart';
+import '../../../../splash.dart';
 
 class SplashPage extends StatefulWidget {
   final SplashController controller;

@@ -1,7 +1,7 @@
 import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
 
-import '../../../home.dart';
+import '../../../../home.dart';
 
 class HomePage extends StatefulWidget {
   final HomeController controller;

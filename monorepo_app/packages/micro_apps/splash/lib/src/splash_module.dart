@@ -1,6 +1,6 @@
 import 'package:core/core.dart';
 
-import 'splash.dart';
+import '../splash.dart';
 
 class SplashModule extends BaseModule {
   @override

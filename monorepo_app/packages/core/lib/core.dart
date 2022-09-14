@@ -1,5 +1,5 @@
 library core;
 
-export 'injection/injection.dart';
-export 'modules/modules.dart';
-export 'routes/routes.dart';
+export 'src/injection/injection.dart';
+export 'src/modules/modules.dart';
+export 'src/routes/routes.dart';

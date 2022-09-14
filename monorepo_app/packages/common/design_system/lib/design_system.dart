@@ -1,1 +1,1 @@
-export 'theme/theme.dart';
+export 'src/theme/theme.dart';

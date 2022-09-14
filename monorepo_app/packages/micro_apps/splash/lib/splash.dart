@@ -1,2 +1,2 @@
-export 'presentation/presentation.dart';
-export 'splash_module.dart';
+export 'src/presentation/presentation.dart';
+export 'src/splash_module.dart';
