@@ -1,0 +1,28 @@
+PODS:
+  - counter (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - FlutterPluginRegistrant (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - counter (from `../counter/.ios/Flutter`)
+  - Flutter (from `../counter/.ios/Flutter/engine`)
+  - FlutterPluginRegistrant (from `../counter/.ios/Flutter/FlutterPluginRegistrant`)
+
+EXTERNAL SOURCES:
+  counter:
+    :path: "../counter/.ios/Flutter"
+  Flutter:
+    :path: "../counter/.ios/Flutter/engine"
+  FlutterPluginRegistrant:
+    :path: "../counter/.ios/Flutter/FlutterPluginRegistrant"
+
+SPEC CHECKSUMS:
+  counter: 22b309745bf29d5687dce43084a37fd5031d63f8
+  Flutter: bdfa2e8fe0e2880a2c6a58a0b1a8675c262a07af
+  FlutterPluginRegistrant: d3a0fbc12bc47787a12fcc919193f3959aa7d5ad
+
+PODFILE CHECKSUM: 9a350c76e3e332bb551f9344da22c3999c6fbf07
+
+COCOAPODS: 1.11.3
