@@ -42,7 +42,7 @@ class TodoListViewController: UITableViewController, AddTodoDelegate {
     
         
         guard let flutterEngine = (UIApplication.shared.delegate as? AppDelegate)?.flutterEngine else {return}
-        let flutterViewController = FlutterCounterController(engine: flutterEngine, todo: todos[index])
+        let flutterViewController = FlutterTodoDetailController(engine: flutterEngine, todo: todos[index])
                 
         navigationController?.pushViewController(flutterViewController, animated: true)
     }

@@ -8,7 +8,7 @@
 import UIKit
 import Flutter
 
-class FlutterCounterController: FlutterViewController {
+class FlutterTodoDetailController: FlutterViewController {
     
     var channel: FlutterMethodChannel?
     var todo: Todo?
@@ -27,12 +27,7 @@ class FlutterCounterController: FlutterViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
         channel?.invokeMethod("setTodo", arguments: ["description": todo?.descr, "deadline": todo?.deadline])
-
-        // Do any additional setup after loading the view.
     }
     
     
@@ -45,15 +40,5 @@ class FlutterCounterController: FlutterViewController {
         super.viewWillDisappear(true)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
