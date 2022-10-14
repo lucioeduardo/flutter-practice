@@ -28,8 +28,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final int _counter = 0;
-
   final channel = const MethodChannel('test_channel');
   String? description;
   String? deadline;
@@ -66,10 +64,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               deadline ?? "Loading...",
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),

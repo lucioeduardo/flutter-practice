@@ -1,8 +1,8 @@
 {
-  "name": "counter",
+  "name": "todo_detail_flutter",
   "version": "0.0.1",
   "summary": "Flutter module",
-  "description": "Flutter module - counter",
+  "description": "Flutter module - todo_detail_flutter",
   "homepage": "https://flutter.dev",
   "license": {
     "type": "BSD"

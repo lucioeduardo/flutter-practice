@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A21AD4899BBADAE624F35A229CA327CB"
-               BuildableName = "counter"
-               BlueprintName = "counter"
+               BlueprintIdentifier = "5AAEA1CC2749B3298166B49F2052D4E6"
+               BuildableName = "todo_detail_flutter"
+               BlueprintName = "todo_detail_flutter"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

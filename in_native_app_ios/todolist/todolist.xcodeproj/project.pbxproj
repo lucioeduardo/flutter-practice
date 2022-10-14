@@ -132,7 +132,7 @@
 			buildConfigurationList = A0C4690C28F04EA400A7C645 /* Build configuration list for PBXNativeTarget "todolist" */;
 			buildPhases = (
 				F47EFBA3B3017C8344E4BA47 /* [CP] Check Pods Manifest.lock */,
-				57ACFBCA688410A669A467DA /* [CP-User] Run Flutter Build counter Script */,
+				BF85A6769F294DB142AF4677 /* [CP-User] Run Flutter Build todo_detail_flutter Script */,
 				A0C468F428F04EA300A7C645 /* Sources */,
 				A0C468F528F04EA300A7C645 /* Frameworks */,
 				A0C468F628F04EA300A7C645 /* Resources */,
@@ -194,15 +194,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		57ACFBCA688410A669A467DA /* [CP-User] Run Flutter Build counter Script */ = {
+		BF85A6769F294DB142AF4677 /* [CP-User] Run Flutter Build todo_detail_flutter Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			name = "[CP-User] Run Flutter Build counter Script";
+			name = "[CP-User] Run Flutter Build todo_detail_flutter Script";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../counter/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../todo_detail_flutter/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
 		};
 		CF0BD18646EFBE915539EFD8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
