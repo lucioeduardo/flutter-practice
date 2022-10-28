@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
@@ -27,7 +28,11 @@ class HomePage extends StatelessWidget {
                   } else if (state is InitialState) {
                     return _InitialWidget(store: store, btnStyle: btnStyle);
                   } else if (state is LoadedState) {
-                    return _LoadedWidget(store: store, btnStyle: btnStyle);
+                    return _LoadedWidget(
+                      store: store,
+                      btnStyle: btnStyle,
+                      state: state,
+                    );
                   }
                   return const SizedBox.shrink();
                 })),
@@ -61,10 +66,12 @@ class _LoadedWidget extends StatelessWidget {
     Key? key,
     required this.store,
     required this.btnStyle,
+    required this.state,
   }) : super(key: key);
 
   final HomeStore store;
   final ButtonStyle btnStyle;
+  final LoadedState state;
 
   @override
   Widget build(BuildContext context) {
