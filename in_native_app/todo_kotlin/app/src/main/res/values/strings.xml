@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TodoKotlin</string>
+    <string name="add_todo">Adicionar ToDo</string>
+    <string name="todo_description">Descrição da tarefa</string>
+    <string name="date_format">DD/MM/YYYY</string>
+    <string name="confirm">Confirmar</string>
+</resources>
