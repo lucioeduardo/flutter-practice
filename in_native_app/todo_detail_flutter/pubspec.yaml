@@ -83,5 +83,5 @@ flutter:
   # identifiers, which may be completely independent or the same as these.
   module:
     androidX: true
-    androidPackage: com.example.counter
-    iosBundleIdentifier: com.example.counter
+    androidPackage: com.example.tododetail
+    iosBundleIdentifier: com.example.tododetail
