@@ -13,9 +13,11 @@ class AboutPage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text('This is an app to test GoRouter'),
-            ElevatedButton(onPressed: () => context.push('/about/inner'), child: const Text("About"))
+            ElevatedButton(onPressed: () => context.push('/about/inner'), child: const Text("Details")),
+            ElevatedButton(onPressed: () => context.go('/'), child: const Text("Home"))
           ],
         ),
       ),

@@ -137,7 +137,7 @@ final router = GoRouter(
         GoRoute(
           parentNavigatorKey: _rootKey,
           path: 'inner',
-          builder: (context, state) => const AboutInnerPage(),
+          builder: (context, state) => const AboutDetailsPage(),
         )
       ],
     )

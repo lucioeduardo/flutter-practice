@@ -34,12 +34,12 @@ class HomePage extends StatelessWidget {
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
             ListTile(
-              onTap: () {},
+              onTap: () => context.go('/about/inner'),
               title: const Text('Go'),
               subtitle: const Text('Creates the entire stack'),
             ),
             ListTile(
-              onTap: () {},
+              onTap: () => context.push('/about/inner'),
               title: const Text('Push'),
               subtitle: const Text('Pushes the single route'),
             ),
