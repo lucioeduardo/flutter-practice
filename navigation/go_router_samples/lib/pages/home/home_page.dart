@@ -18,10 +18,13 @@ class HomePage extends StatelessWidget {
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
             ListTile(
-              onTap: () => context.go('/a'),
+              onTap: () => context.go('/statefulStack/a'),
               title: const Text('StatefulShellRoute - IndexedStack'),
             ),
-            ListTile(onTap: () {}, title: const Text('StatefulShellRoute')),
+            ListTile(
+              onTap: () => context.go('/stateful/a'),
+              title: const Text('StatefulShellRoute'),
+            ),
             ListTile(onTap: () {}, title: const Text('ShellRoute')),
             const Text(
               'Nested Routes',

@@ -20,7 +20,7 @@ class SectionPage extends StatelessWidget {
         Text("My Root Page $pageTitle"),
         ElevatedButton(
             onPressed: () {
-              context.push(Uri(path: "$detailsPagePath/5", queryParameters: {'teste': '1'}).toString());
+              context.go(Uri(path: "$detailsPagePath/5", queryParameters: {'teste': '1'}).toString());
             },
             child: const Text('Ver detalhes')),
       ],

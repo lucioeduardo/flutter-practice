@@ -27,9 +27,9 @@ final router = GoRouter(
             StatefulShellBranch(
               routes: [
                 GoRoute(
-                    path: 'a',
-                    pageBuilder: (context, state) =>
-                        const NoTransitionPage(child: SectionPage(pageTitle: 'A', detailsPagePath: '/a/details')),
+                    path: 'statefulStack/a',
+                    pageBuilder: (context, state) => const NoTransitionPage(
+                        child: SectionPage(pageTitle: 'A', detailsPagePath: '/statefulStack/a/details')),
                     routes: [
                       GoRoute(
                         name: 'detailsA',
@@ -46,9 +46,9 @@ final router = GoRouter(
             StatefulShellBranch(
               routes: [
                 GoRoute(
-                    path: 'b',
-                    pageBuilder: (context, state) =>
-                        const NoTransitionPage(child: SectionPage(pageTitle: 'B', detailsPagePath: '/b/details')),
+                    path: 'statefulStack/b',
+                    pageBuilder: (context, state) => const NoTransitionPage(
+                        child: SectionPage(pageTitle: 'B', detailsPagePath: '/statefulStack/b/details')),
                     routes: [
                       GoRoute(
                         path: 'details/:id',
@@ -58,6 +58,44 @@ final router = GoRouter(
               ],
             )
           ],
+        ),
+        StatefulShellRoute(
+          branches: [
+            StatefulShellBranch(
+              routes: [
+                GoRoute(
+                    path: 'stateful/a',
+                    pageBuilder: (context, state) => const NoTransitionPage(
+                        child: SectionPage(pageTitle: 'A', detailsPagePath: '/stateful/a/details')),
+                    routes: [
+                      GoRoute(
+                        path: 'details/:id',
+                        builder: (context, state) => const SectionDetailsPage(label: 'A'),
+                      ),
+                    ]),
+              ],
+            ),
+            StatefulShellBranch(
+              routes: [
+                GoRoute(
+                    path: 'stateful/b',
+                    pageBuilder: (context, state) => const NoTransitionPage(
+                        child: SectionPage(pageTitle: 'B', detailsPagePath: '/stateful/b/details')),
+                    routes: [
+                      GoRoute(
+                        path: 'details/:id',
+                        builder: (context, state) => const SectionDetailsPage(label: 'B'),
+                      ),
+                    ]),
+              ],
+            )
+          ],
+          navigatorContainerBuilder: (context, navigationShell, children) {
+            return children[navigationShell.currentIndex];
+          },
+          builder: (context, state, navigationShell) {
+            return MainViewPage(navigationShell: navigationShell);
+          },
         ),
       ],
     ),
