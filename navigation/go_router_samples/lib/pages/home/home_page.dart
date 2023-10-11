@@ -25,7 +25,10 @@ class HomePage extends StatelessWidget {
               onTap: () => context.go('/stateful/a'),
               title: const Text('StatefulShellRoute'),
             ),
-            ListTile(onTap: () {}, title: const Text('ShellRoute')),
+            ListTile(
+              onTap: () => context.go('/shell/a'),
+              title: const Text('ShellRoute'),
+            ),
             const Text(
               'Nested Routes',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),

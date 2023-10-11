@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:router_app/pages/about/about_inner_page.dart';
-import 'package:router_app/pages/bottom_navigation/main_view_page.dart';
-import 'package:router_app/pages/bottom_navigation/section_details_page.dart';
-import 'package:router_app/pages/bottom_navigation/section_page.dart';
+import 'package:router_app/pages/custom_scaffold/custom_scaffold.dart';
 import 'package:router_app/pages/home/home_page.dart';
+import 'package:router_app/pages/section/section_details_page.dart';
+import 'package:router_app/pages/section/section_page.dart';
 
 import 'pages/about/about_page.dart';
+import 'pages/custom_scaffold/custom_scaffold_stateless.dart';
 
 final _rootKey = GlobalKey<NavigatorState>();
 
@@ -21,7 +22,7 @@ final router = GoRouter(
       routes: [
         StatefulShellRoute.indexedStack(
           builder: (context, state, navigationShell) {
-            return MainViewPage(navigationShell: navigationShell);
+            return CustomScaffold(navigationShell: navigationShell);
           },
           branches: [
             StatefulShellBranch(
@@ -94,9 +95,38 @@ final router = GoRouter(
             return children[navigationShell.currentIndex];
           },
           builder: (context, state, navigationShell) {
-            return MainViewPage(navigationShell: navigationShell);
+            return CustomScaffold(navigationShell: navigationShell);
           },
         ),
+        ShellRoute(
+            builder: (context, state, child) {
+              return CustomScaffoldPageStateless(
+                child: child,
+              );
+            },
+            routes: [
+              GoRoute(
+                path: 'shell/a',
+                pageBuilder: (context, state) =>
+                    const NoTransitionPage(child: SectionPage(pageTitle: 'A', detailsPagePath: '/shell/a/details')),
+                routes: [
+                  GoRoute(
+                    path: 'details/:id',
+                    builder: (context, state) => const SectionDetailsPage(label: 'A'),
+                  ),
+                ],
+              ),
+              GoRoute(
+                  path: 'shell/b',
+                  pageBuilder: (context, state) =>
+                      const NoTransitionPage(child: SectionPage(pageTitle: 'B', detailsPagePath: '/shell/b/details')),
+                  routes: [
+                    GoRoute(
+                      path: 'details/:id',
+                      builder: (context, state) => const SectionDetailsPage(label: 'B'),
+                    ),
+                  ]),
+            ]),
       ],
     ),
     GoRoute(
