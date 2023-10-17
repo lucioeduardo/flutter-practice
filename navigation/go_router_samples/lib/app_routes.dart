@@ -8,6 +8,7 @@ import 'package:router_app/pages/section/section_page.dart';
 
 import 'pages/about/about_page.dart';
 import 'pages/custom_scaffold/custom_scaffold_stateless.dart';
+import 'pages/profile/profile_page.dart';
 
 final _rootKey = GlobalKey<NavigatorState>();
 
@@ -141,6 +142,14 @@ final router = GoRouter(
           builder: (context, state) => const AboutDetailsPage(),
         )
       ],
-    )
+    ),
+    GoRoute(
+      name: 'profilePage',
+      path: '/profile/:name',
+      builder: (context, state) => ProfilePage(
+        age: state.uri.queryParameters['age'] ?? '',
+        name: state.pathParameters['name'] ?? '',
+      ),
+    ),
   ],
 );

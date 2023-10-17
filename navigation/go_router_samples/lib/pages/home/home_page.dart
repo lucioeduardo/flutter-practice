@@ -55,6 +55,22 @@ class HomePage extends StatelessWidget {
               onTap: () => context.replace('/about'),
               title: const Text('Replace'),
             ),
+            const Text(
+              'Passing params',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+            ListTile(
+              onTap: () => context.push(Uri(path: '/profile/Eduardo', queryParameters: {'age': '23'}).toString()),
+              title: const Text('By path'),
+            ),
+            ListTile(
+              onTap: () => context.pushNamed(
+                'profilePage',
+                pathParameters: {'name': 'Eduardo'},
+                queryParameters: {'age': '23'},
+              ),
+              title: const Text('By named route'),
+            ),
           ],
         ),
       ),
