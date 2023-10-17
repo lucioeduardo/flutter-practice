@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
               title: const Text('ShellRoute'),
             ),
             const Text(
-              'Nested Routes',
+              'SubRoutes',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
             ListTile(
@@ -42,6 +42,18 @@ class HomePage extends StatelessWidget {
               onTap: () => context.push('/about/inner'),
               title: const Text('Push'),
               subtitle: const Text('Pushes the single route'),
+            ),
+            const Text(
+              'Replacement',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+            ListTile(
+              onTap: () => context.pushReplacement('/about'),
+              title: const Text('PushReplacement'),
+            ),
+            ListTile(
+              onTap: () => context.replace('/about'),
+              title: const Text('Replace'),
             ),
           ],
         ),
