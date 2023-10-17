@@ -131,6 +131,7 @@ final router = GoRouter(
     ),
     GoRoute(
       parentNavigatorKey: _rootKey,
+      name: 'aboutPage',
       path: '/about',
       builder: (context, state) => const AboutPage(),
       routes: [
