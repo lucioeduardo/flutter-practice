@@ -146,6 +146,11 @@ final router = GoRouter(
     GoRoute(
       name: 'profilePage',
       path: '/profile/:name',
+      redirect: (context, state) {
+        return (state.extra == null || state.pathParameters.isEmpty || state.uri.queryParameters.isEmpty)
+            ? '/about'
+            : null;
+      },
       builder: (context, state) => ProfilePage(
         age: state.uri.queryParameters['age'] ?? '',
         name: state.pathParameters['name'] ?? '',
