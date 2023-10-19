@@ -84,9 +84,7 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               ListTile(
-                onTap: () => context.pushNamed(
-                  'profilePage',
-                ),
+                onTap: () => context.pushNamed('profilePage', pathParameters: {'name': 'x'}),
                 title: const Text('Go to Profile Page'),
                 subtitle: const Text('Without required params'),
               ),
