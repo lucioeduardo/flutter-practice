@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:router_app/pages/about/about_inner_page.dart';
 import 'package:router_app/pages/custom_scaffold/custom_scaffold.dart';
 import 'package:router_app/pages/home/home_page.dart';
+import 'package:router_app/pages/not_found/not_found_page.dart';
 import 'package:router_app/pages/section/section_details_page.dart';
 import 'package:router_app/pages/section/section_page.dart';
 
@@ -15,6 +16,7 @@ final _rootKey = GlobalKey<NavigatorState>();
 final router = GoRouter(
   initialLocation: '/',
   navigatorKey: _rootKey,
+  errorBuilder: (context, state) => const NotFoundPage(),
   routes: [
     GoRoute(
       parentNavigatorKey: _rootKey,
