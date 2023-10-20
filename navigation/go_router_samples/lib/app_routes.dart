@@ -104,6 +104,7 @@ final router = GoRouter(
         ShellRoute(
             builder: (context, state, child) {
               return CustomScaffoldPageStateless(
+                index: state.fullPath?.contains('/a') ?? false ? 0 : 1,
                 child: child,
               );
             },
